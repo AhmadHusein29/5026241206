@@ -6,13 +6,8 @@
     <center>
         <br />
         <br />
-        <p>Cari Barang :</p>
-        <form action="/pegawaicari" method="GET">
-            <input type="text" name="cari" placeholder="Cari Pegawai .." class="form-control">
-            <br />
-            <input type="submit" value="CARI" class="btn btn-secondary">
-        </form>
 
+        <h1>Daftar Keranjang Belanja</h1>
         <br />
 
         <table class="table table-striped table-hover">
@@ -35,6 +30,7 @@
                     <td>Rp {{ number_format($k->Jumlah * $k->Harga, 0, ',', '.') }}</td>
 
                     <td>
+                        <a href="/keranjangbelanja/tambah/" class="btn btn-success">Beli</a>
                         <a href="/keranjangbelanja/hapus/{{ $k->ID }}" class="btn btn-danger">Batal</a>
                     </td>
                 </tr>
