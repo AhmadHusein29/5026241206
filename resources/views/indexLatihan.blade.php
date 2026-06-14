@@ -4,11 +4,18 @@
 
 @section('konten')
     <center>
+        <h1>Daftar Keranjang Belanja</h1>
+    </center>
+
+
+    <a href="/keranjangbelanja/tambah/" class="btn btn-primary">Tambah Data</a>
+    <center>
         <br />
         <br />
 
-        <h1>Daftar Keranjang Belanja</h1>
-        <br />
+
+
+
 
         <table class="table table-striped table-hover">
             <tr>
