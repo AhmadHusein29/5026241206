@@ -9,6 +9,7 @@ use App\Http\Controllers\KeranjangBelanjaController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\ObatController;
 use App\Http\Controllers\NilaiKuliahController;
+use App\Http\Controllers\PegawaiControllerEAS;
 
 Route::get('/', function () {
     return view('welcome');
@@ -98,3 +99,9 @@ Route::get('/obathapus/{id}', [ObatController::class, 'hapus'])->name('obat.dest
 Route::get('/NilaiKuliah', [NilaiKuliahController::class, 'index']);
 Route::get('/NilaiKuliah/tambah', [NilaiKuliahController::class, 'tambah']);
 Route::post('/NilaiKuliah/store', [NilaiKuliahController::class, 'store']);
+
+//route EAS
+Route::get('/eas', [PegawaiControllerEAS::class, 'index'])->name('pegawai.index');
+Route::get('/eas/tambah', [PegawaiControllerEAS::class, 'tambah'])->name('pegawai.create');
+Route::post('/eas/store', [PegawaiControllerEAS::class, 'store'])->name('pegawai.store');
+Route::get('/eas/view/{id}', [PegawaiControllerEAS::class, 'view'])->name('pegawai.view');
